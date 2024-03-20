@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Data</h1>
+        <form id="myForm" method="POST" action="{% url 'checkspam' %}">
+            {% csrf_token %}
+            <label for="inputmail">Input Field:</label>
+            <input type="text" id="inputmail" name="inputmail" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
